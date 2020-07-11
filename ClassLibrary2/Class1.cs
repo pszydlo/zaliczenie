@@ -7,6 +7,28 @@ namespace Gra
     {
 
         private static Random random = new Random();
+        public static List<string> tworzplansze()
+        {
+            List<string> plansza = new List<string>();
+            for (int i = 0; i < 9; i++)
+            {
+                plansza.Add(" ");
+                
+            }
+            return plansza;
+        }
+        public static List<int> tworzplanszecyfry()
+        {
+            List<int> plansza = new List<int>();
+            for (int i = 0; i < 9; i++)
+            {
+                plansza.Add(i + 1);
+            }
+            return plansza;
+
+        }
+
+
         public static void druk(List<string> lista)
         {
 
@@ -64,15 +86,34 @@ namespace Gra
 
 
         }
-        public static int punkt()
+        public static int punkt(List<int> lista)
 
         {
             int pole = 9999;
+            int cyfra;
+            int flag = 0;
             do
             {
-                pole = Convert.ToInt32(Console.ReadLine());
-
-            } while (pole > 9 && pole < 1);
+                flag = 0;
+                Console.WriteLine("Wybierz liczbe z tablicy");
+                string input = Console.ReadLine();
+                bool sukces = Int32.TryParse(input, out cyfra);
+                if (sukces)
+                {
+                    pole = cyfra;
+                }
+                else
+                {
+                    Console.WriteLine(" Podaj liczbe");
+                }
+                bool istnieje = lista.Exists(x => x == pole);
+                if (!istnieje)
+                {
+                    flag = 1;
+                    Console.WriteLine(" Wybrano liczbe z niepoprawnego zakresu ");
+                }
+                          
+            } while (pole > 9 || pole < 1 || flag == 1);
             return pole;
         }
         public static int komputer(List<string> lista)
@@ -88,7 +129,7 @@ namespace Gra
             }
 
             int index = random.Next(array1.Count);
-            return index;
+            return array1[index];
 
         }
         public static bool wynik(List<string> lista)

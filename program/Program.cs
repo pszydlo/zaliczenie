@@ -11,39 +11,34 @@ namespace program
         {
             List<string> plansza = new List<string>();
             List<int> planszacyfry = new List<int>();
+            int ruchy = 0;
 
-            for (int i = 0; i < 9; i++)
-            {
-                plansza.Add(" ");
-                planszacyfry.Add(i + 1);
-            }
+            plansza = Class1.tworzplansze();
+            planszacyfry = Class1.tworzplanszecyfry();
 
-            string aktznak = "A";
+            
             string znak = Class1.gracz();
             string znakkomp = Class1.znakkomputera(znak);
-            aktznak = znak;
             Class1.drukcyfry(planszacyfry);
-            if (aktznak == "X")
-            {
-                aktznak = "O";
-            }
-            else
-            {
-                aktznak = "X";
-            }
-            bool czykoniec = true;
+            
+            bool czykoniec ;
 
             do
             {
 
-                Console.WriteLine("Wybierz pole");
-                int pole = Class1.punkt();
+                
+                int pole = Class1.punkt(planszacyfry);
                 plansza[pole - 1] = znak;
                 planszacyfry[pole - 1] = 0;
                 Class1.druk(plansza);
-                pole = Class1.komputer(plansza);
-                plansza[pole] = znakkomp;
-                planszacyfry[pole] = 0;
+                if (ruchy < 4)
+                {
+                    pole = Class1.komputer(plansza);
+                    plansza[pole] = znakkomp;
+                    planszacyfry[pole] = 0;
+                }
+                
+                ruchy++;
                 Class1.druk(plansza);
                 Class1.drukcyfry(planszacyfry);
                 czykoniec = Class1.pionowo(plansza, znak) && Class1.poziomo(plansza, znak) && Class1.skos(plansza, znak);
