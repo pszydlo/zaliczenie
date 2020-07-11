@@ -1,0 +1,16 @@
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\program.exe
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\program.deps.json
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\program.runtimeconfig.json
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\program.runtimeconfig.dev.json
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\program.dll
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\program.pdb
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\ClassLibrary2.dll
+C:\Users\Bartek\source\repos\ClassLibrary2\program\bin\Debug\netcoreapp3.1\ClassLibrary2.pdb
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.csprojAssemblyReference.cache
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.AssemblyInfoInputs.cache
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.AssemblyInfo.cs
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.csproj.CoreCompileInputs.cache
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.csproj.CopyComplete
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.dll
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.pdb
+C:\Users\Bartek\source\repos\ClassLibrary2\program\obj\Debug\netcoreapp3.1\program.genruntimeconfig.cache
