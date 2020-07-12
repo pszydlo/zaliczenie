@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Gra
 {
-    public class Class1
+    public class Class1 // nazwa klasy powinna opisywać co robi / skoro ta klasa jest odpowiedzialna za planszę to niech nie przyjmuje w metodach listy tylko posiada pole listy 
     {
 
         private static Random random = new Random();
-        public static List<string> tworzplansze()
+        public static List<string> tworzplansze()  // nazwy metod i zmiennych powinny być po angielsku, i ta metoda tworzy pustą planszę więc nazwę zmienić 
         {
             List<string> plansza = new List<string>();
             for (int i = 0; i < 9; i++)
@@ -20,9 +20,9 @@ namespace Gra
         public static List<int> tworzplanszecyfry()
         {
             List<int> plansza = new List<int>();
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i++) //i = 1 : i < 10 
             {
-                plansza.Add(i + 1);
+                plansza.Add(i + 1); // wtedy wywal tego i +1
             }
             return plansza;
 
@@ -45,7 +45,7 @@ namespace Gra
 
 
         }
-        public static void drukcyfry(List<int> lista)
+        public static void drukcyfry(List<int> lista) // dwie takie same metody , nie potrzebane 
         {
 
 
@@ -59,7 +59,7 @@ namespace Gra
             Console.WriteLine();
 
         }
-        public static string znakkomputera(string znakgracza)
+        public static string znakkomputera(string znakgracza) // można zrobić enum na O i X 
         {
             string znakkomp = " ";
             if (znakgracza == "X")
@@ -73,7 +73,7 @@ namespace Gra
             return znakkomp;
         }
 
-        public static string gracz()
+        public static string gracz() // ta funcja pobier znak od gracza więc może nazwę zmienić  + to enum 
         {
             string znakgracza = " ";
             do
@@ -86,12 +86,12 @@ namespace Gra
 
 
         }
-        public static int punkt(List<int> lista)
+        public static int punkt(List<int> lista) // tak samo z nazwą 
 
         {
-            int pole = 9999;
+            int pole = 9999; // nie ma potrzeby inicjalizować jakąkolwiek wartością 
             int cyfra;
-            int flag = 0;
+            int flag = 0; // skoro flaga to bool 
             do
             {
                 flag = 0;
@@ -106,14 +106,14 @@ namespace Gra
                 {
                     Console.WriteLine(" Podaj liczbe");
                 }
-                bool istnieje = lista.Exists(x => x == pole);
+                bool istnieje = lista.Exists(x => x == pole); // to moża do ifa od razu włożyć 
                 if (!istnieje)
                 {
                     flag = 1;
                     Console.WriteLine(" Wybrano liczbe z niepoprawnego zakresu ");
                 }
                           
-            } while (pole > 9 || pole < 1 || flag == 1);
+            } while (pole > 9 || pole < 1 || flag == 1); // już w ifie sprawdzasz ten zakres 1- 9 więc nie ma po co sprawdzać, zostawiasz tylko while(flag) najlepiej przerobić na zwykły while a nie do while 
             return pole;
         }
         public static int komputer(List<string> lista)
@@ -128,7 +128,7 @@ namespace Gra
 
             }
 
-            int index = random.Next(array1.Count);
+            int index = random.Next(array1.Count); 
             return array1[index];
 
         }
